@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
 .header_main h1 {
@@ -41,6 +42,7 @@
 
 .header_main p {
   opacity: .8;
+  color: white;
 }
 
 .header_btns {
