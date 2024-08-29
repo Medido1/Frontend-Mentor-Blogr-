@@ -115,6 +115,10 @@
   cursor: pointer;
 }
 
+.sub_menu li:hover {
+  font-weight: 600;
+}
+
 .log_in_window {
   display: flex;
   flex-direction: column;
@@ -131,6 +135,7 @@
 }
 
 .sign.btn {
+  cursor: pointer;
   padding: .75rem 1.5rem;
   background: linear-gradient(to right, var(--Very_light_red), var(--Light_red));
   color: var(--White);
@@ -139,4 +144,69 @@
   border: 0;
   outline: none;
   font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background: url(../assets/images/bg-pattern-intro-desktop.svg) no-repeat, 
+    linear-gradient(to right, var(--Very_light_red), var(--Light_red));
+    background-position: 25% 50%;
+    background-size: auto;
+  }
+  .header_top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header_top_left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav_links li div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .nav_links>ul {
+    gap: 4rem;
+  }
+  .nav_links ul {
+    display: flex;
+   
+    list-style: none;
+  }
+  .nav_links ul li {
+    position: relative;
+    cursor: pointer;
+  }
+  .nav_links p {
+    color: white;
+  }
+  .sub_menu {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: white;
+  }
+  .nav_links ul li .sub_menu {
+    position: absolute;
+    top: 25%;
+  }
+  .log_in_window {
+    flex-direction: row;
+    width: auto;
+    border: 0;
+  }
+  .sign.btn {
+    background: none;
+    background-color: white;
+    color: var(--Light_red);
+  }
+  a {
+    cursor: pointer;
+  }
+  h1 {
+    font-size: 3rem;
+  }
 }

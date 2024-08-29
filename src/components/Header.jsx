@@ -1,28 +1,55 @@
-import { useState } from 'react';
-import iconHamburger from '../assets/images/icon-hamburger.svg';
-import iconClose from '../assets/images/icon-close.svg';
-import logo from '../assets/images/logo.svg';
+import { useState, useEffect } from 'react';
 import MobileMenu from './MobileMenu';
+import HeaderTop from './HeaderTop';
 import '../styles/Header.css';
+import { products, company, connect } from '../data';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
-  function toggleMenu() {
-    setIsMenuOpen(!isMenuOpen);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    };
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  const [productList, setProductList] = useState(products);
+  const [companyList, setCompanyList] = useState(company);
+  const [connectList, setConnectList] = useState(connect);
+  const [menu, setMenu] = useState({
+    productMenu: false, 
+    companyMenu: false,
+    connectMenu: false
+  })
+
+  function toggleMenu(menu) {
+    setMenu(prevMenu => ({...prevMenu, [menu]: !prevMenu[menu]}))
   }
+
   return (
     <header className="header">
-      <div className="header_top">
-        <img  src={logo} className='logo' alt='Blogr logo'/>
-        <button className="menu_btn" onClick={toggleMenu} aria-label="toggle menu button">
-          <img src={isMenuOpen ? iconClose : iconHamburger} 
-            alt='icon hamburger' 
-            className='icon hamburger'
-          />
-        </button>
-      </div>
-      {isMenuOpen && <MobileMenu />}
+      <HeaderTop
+       isMobile={isMobile}
+       isMenuOpen={isMenuOpen}
+       setIsMenuOpen={setIsMenuOpen}
+       productList = {productList}
+       companyList = {companyList}
+       connectList = {connectList}
+       menu = {menu}
+       toggleMenu = {toggleMenu}
+       />
+      {isMenuOpen && <MobileMenu 
+        productList = {productList}
+        companyList = {companyList}
+        connectList = {connectList}
+        menu = {menu}
+        toggleMenu = {toggleMenu}
+      />}
       <div className="header_main">
         <h1>A modern publishing platform</h1>
         <p>Grow your audience and build your online brand</p>

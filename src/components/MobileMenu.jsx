@@ -1,22 +1,9 @@
-import { useState } from 'react'
 import iconDown from '../assets/images/icon-arrow-dark.svg';
 import SubMenu from './SubMenu';
-import { products, company, connect } from '../data';
 import LogIn from './LogIn';
 
-export default function MobileMenu() {
-  const [productList, setProductList] = useState(products);
-  const [companyList, setCompanyList] = useState(company);
-  const [connectList, setConnectList] = useState(connect);
-  const [menu, setMenu] = useState({
-    productMenu: false, 
-    companyMenu: false,
-    connectMenu: false
-  })
-
-  function toggleMenu(menu) {
-    setMenu(prevMenu => ({...prevMenu, [menu]: !prevMenu[menu]}))
-  }
+export default function MobileMenu({productList, companyList, connectList , toggleMenu, menu}) {
+  
   return (
     <div className="mobile_menu">
       <ul>
