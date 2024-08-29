@@ -25,3 +25,20 @@
  --overPass : "Overpass", sans-serif;
  --Ubuntu: "Ubuntu", sans-serif;
 }
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  font-size: 1rem;
+}
+

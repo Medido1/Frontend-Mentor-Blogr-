@@ -1,0 +1,140 @@
+/* header styling */
+.header {
+  background: url(./assets/images/bg-pattern-intro-mobile.svg) no-repeat, 
+  linear-gradient(to right, var(--Very_light_red), var(--Light_red));
+  background-position: 34% 33%;
+  padding: 1rem;
+  padding-top: 2rem;
+  font-family: var(--overPass);
+  color: var(--White);
+  border-radius: 0 0 0 6rem;
+}
+
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+}
+
+.menu_btn {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.header_main {
+  text-align: center;
+  padding: 6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header_main h1 {
+  font-weight: 500;
+}
+
+.header_main p {
+  opacity: .8;
+}
+
+.header_btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.header_btns button {
+  cursor: pointer;
+  border-radius: 100vmax;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: .5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.header_btns button:first-child {
+  color: var(--Light_red);
+  background-color: var(--White);
+}
+
+.mobile_menu {
+  background-color: var(--White);
+  position: absolute;
+  border-radius: .5rem;
+  z-index: 999;
+  top: 15%;
+  width: 90vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--Very_dark_black_blue);
+}
+
+.mobile_menu ul {
+  list-style: none;
+}
+
+.mobile_menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.icon.arrow.flipped {
+  transform: scaleY(-1);
+}
+
+.sub_menu {
+  margin-top: 1rem;
+  background-color: var(--Grayish_blue);
+  padding: 1rem;
+  color: var(--Very_dark_grayish_blue);
+  border-radius: .25rem;
+  width: 70vw;
+  margin-bottom: 1rem;
+}
+
+.sub_menu li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.sub_menu li {
+  cursor: pointer;
+}
+
+.log_in_window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--Grayish_blue);
+  width: 70vw;
+  padding: 1rem;
+}
+
+.log_in_window a {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.sign.btn {
+  padding: .75rem 1.5rem;
+  background: linear-gradient(to right, var(--Very_light_red), var(--Light_red));
+  color: var(--White);
+  font-weight: 600;
+  border-radius: 100vmax;
+  border: 0;
+  outline: none;
+  font-size: 1rem;
+}
