@@ -26,6 +26,10 @@ p {
   line-height: 1.5;
 }
 
+.illustaration.main img{
+  margin: auto;
+}
+
 .container {
   background: url(../assets//images/bg-pattern-circles.svg) no-repeat,
     linear-gradient(to right, var(--Very_dark_gray_blue), var(--Very_dark_desaturated_blue));
