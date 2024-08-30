@@ -145,6 +145,16 @@
   outline: none;
   font-size: 1rem;
 }
+.sign.btn:hover,
+.header_btns button:first-child:hover {
+  background: rgba(248, 248, 248, .5);
+  color: white;
+}
+
+.header_btns button:last-child:hover {
+  background-color: white;
+  color: var(--Light_red);
+}
 
 @media (min-width: 768px) {
   .header {

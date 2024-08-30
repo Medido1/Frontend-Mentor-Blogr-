@@ -33,7 +33,9 @@ export default function HeaderTop(
           <img  src={logo} className='logo' alt='Blogr logo'/>
           <div className="nav_links">
             <ul>
-              <li onClick={() => toggleMenu("productMenu")}>
+              <li onMouseEnter={() => toggleMenu("productMenu")}
+                  onMouseLeave={() => toggleMenu("productMenu")}
+              >
                 <div>
                   <p>Product</p>
                   <img src={iconDown}
@@ -42,7 +44,9 @@ export default function HeaderTop(
                 </div>
                 {menu.productMenu && <SubMenu arr={productList}/>}
               </li>
-              <li onClick={() => toggleMenu("companyMenu")}>
+              <li onMouseEnter={() => toggleMenu("companyMenu")}
+                  onMouseLeave={() => toggleMenu("companyMenu")}
+              >
                 <div>
                   <p>Company</p>
                   <img src={iconDown} 
@@ -51,7 +55,9 @@ export default function HeaderTop(
                 </div>
                 {menu.companyMenu && <SubMenu arr={companyList}/>}
               </li>
-              <li onClick={() => toggleMenu("connectMenu")}>
+              <li onMouseEnter={() => toggleMenu("connectMenu")}
+                  onMouseLeave={() => toggleMenu("connectMenu")}
+              >
                 <div>
                   <p>Connect</p>
                   <img src={iconDown} 

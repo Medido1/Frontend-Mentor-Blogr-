@@ -26,6 +26,7 @@
 
 .footer ul li:hover {
   font-weight: 600;
+  border-bottom: 1px solid white;
 }
 @media (min-width: 768px) {
   .footer {
