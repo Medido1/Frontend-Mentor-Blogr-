@@ -4,19 +4,9 @@ import HeaderTop from './HeaderTop';
 import '../styles/Header.css';
 import { products, company, connect } from '../data';
 
-export default function Header() {
+export default function Header({isMobile}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
-    };
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+  
 
   const [productList, setProductList] = useState(products);
   const [companyList, setCompanyList] = useState(company);
