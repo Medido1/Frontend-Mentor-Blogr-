@@ -21,4 +21,21 @@
 
 .footer ul li {
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.footer ul li:hover {
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: left;
+    padding: 4rem;
+  }
+  .footer_heading {
+    margin-bottom: 1rem;
+  }
 }
