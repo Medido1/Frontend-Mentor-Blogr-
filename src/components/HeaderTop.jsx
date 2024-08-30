@@ -38,7 +38,7 @@ export default function HeaderTop(
               >
                 <div>
                   <p>Product</p>
-                  <img src={iconDown}
+                  <img src={iconDown} alt='arrow icon'
                     className={`icon arrow ${menu.productMenu ? 'flipped': ''}`}
                   />
                 </div>
@@ -49,7 +49,7 @@ export default function HeaderTop(
               >
                 <div>
                   <p>Company</p>
-                  <img src={iconDown} 
+                  <img src={iconDown}  alt='arrow icon'
                     className={`icon arrow ${menu.companyMenu ? 'flipped': ''}`}
                   />
                 </div>
@@ -60,7 +60,7 @@ export default function HeaderTop(
               >
                 <div>
                   <p>Connect</p>
-                  <img src={iconDown} 
+                  <img src={iconDown} alt='arrow icon'
                     className={`icon arrow ${menu.connectMenu ? 'flipped': ''}`}
                   />
                 </div>
